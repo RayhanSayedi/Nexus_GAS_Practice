@@ -6,6 +6,7 @@
 #include "AbilitySystemComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Nexus_GAS_Practice/GamepalyAbilitySystem/AttributeSets/BasicAttributeSets.h"
 
 // Sets default values
 ANexusCharacterBase::ANexusCharacterBase()
@@ -37,6 +38,9 @@ ANexusCharacterBase::ANexusCharacterBase()
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
 	GetCharacterMovement()->BrakingDecelerationFalling = 1500.0f;
 	
+	
+	//Add the basic attribute set
+	BasicAttributeSets = CreateDefaultSubobject<UBasicAttributeSets>(TEXT("BasicAttributeSets"));
 }
 
 // Called when the game starts or when spawned
