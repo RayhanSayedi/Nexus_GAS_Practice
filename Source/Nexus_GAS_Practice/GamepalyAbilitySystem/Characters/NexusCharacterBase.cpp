@@ -7,6 +7,7 @@
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Nexus_GAS_Practice/GamepalyAbilitySystem/AttributeSets/BasicAttributeSets.h"
+#include "Nexus_GAS_Practice/GamepalyAbilitySystem/AttributeSets/DefenceAttributeSet.h"
 
 // Sets default values
 ANexusCharacterBase::ANexusCharacterBase()
@@ -41,6 +42,9 @@ ANexusCharacterBase::ANexusCharacterBase()
 	
 	//Add the basic attribute set
 	BasicAttributeSets = CreateDefaultSubobject<UBasicAttributeSets>(TEXT("BasicAttributeSets"));
+	
+	//Add the defence attribute set
+	DefenceAttributeSets = CreateDefaultSubobject<UDefenceAttributeSet>(TEXT("DefenceAttributeSets"));
 }
 
 // Called when the game starts or when spawned

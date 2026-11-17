@@ -8,6 +8,7 @@
 #include "AbilitySystemComponent.h"
 #include "NexusCharacterBase.generated.h"
 
+
 UCLASS()
 class NEXUS_GAS_PRACTICE_API ANexusCharacterBase : public ACharacter, public IAbilitySystemInterface
 {
@@ -24,6 +25,9 @@ public:
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
 	class UBasicAttributeSets* BasicAttributeSets;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
+	class UDefenceAttributeSet* DefenceAttributeSets;
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AbilitySystem")
